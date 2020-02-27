@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document_js</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+        }
+        ul li{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            width: 400px;
+            background-color: darkseagreen;
+            overflow: hidden;
+        }
+        ul li img{
+            object-fit: cover;
+            height: 400px;
+            object-position: center;
+        }
+        ul li a{
+            border: 2px solid coral;
+            text-decoration: none;
+            font-size: 2em;
+            color: coral;
+            background-color: azure;
+            height: 60px;
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+     <!-- 2 llibreria enllaÇada-->   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+     <!-- 3 escriurem en javascript-->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("img").hide();
+            $("li:first-child a").click(function(){
+                $("li:first-child img").fadeIn();
+            });
+            $("li:first-child a").dblclick(function(){
+                $("li:first-child img").fadeOut();
+            });
+            $("li:nth-child(2) a").click(function(){
+                $("li:nth-child(2) img").slideDown();
+            });
+            $("li:nth-child(2) a").dblclick(function(){
+                $("li:nth-child(2) img").slideUp();
+            });
+            $("li:nth-child(3) a").click(function(){
+                $("li:nth-child(3) img").fadeIn();
+            });
+            $("li:nth-child(3) a").dblclick(function(){
+                $("li:nth-child(3) img").fadeOut();
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- 1 contingut-->
+ <ul>
+    <li><a href="#">primer</a>
+    <img src="img/amy.gif" alt="">
+    </li>
+    <li><a href="#">segon</a>
+    <img src="img/freddie.gif" alt="">
+    </li>
+    <li><a href="#">tercer</a>
+    <img src="img/marilyn.gif" alt="">
+    </li>
+ </ul>
+</body>
+</html>
